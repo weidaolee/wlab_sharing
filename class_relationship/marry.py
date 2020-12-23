@@ -1,5 +1,3 @@
-
-
 class Person:
     def __init__(self, name):
         self.name = name
@@ -10,19 +8,18 @@ class Person:
             self.marriage = Marriage()
             self.marriage.add_person(self)
             self.marriage.add_person(person)
+
         else:
             self.marriage = person.marriage
             self.marriage.add_person(self)
 
 
 class Marriage:
-
     def __init__(self):
         self.people = set()
 
     def add_person(self, person):
         self.people.add(person)
-
 
 
 a = Person('a')
